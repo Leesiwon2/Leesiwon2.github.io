@@ -13,26 +13,28 @@
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
+excerpt_seperator:  <!--more-->
 # Site Settings
 locale                   : "ko-KR"
 title                    : "it's cool"
 title_separator          : "|"
-subtitle                 : "Version 1.0"
+subtitle                 : "cool time"
 name                     : "Lee siwon"
-description              : ""
+description              : "it's cool time"
 url                      : "https://leesiwon2.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Leesiwon2/Leesiwon2.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/portfolio.png"
 masthead_title           : " "
+search                   : true # 사이트 우측 상단 검색 활성화
+
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : dev-hundred-blog # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -104,11 +106,11 @@ analytics:
 
 # Site Author
 author:
-  name             : 'LEE SIWON'
+  name             : "LEE SIWON"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Lee Cool"
   location         : "Republic of Korea"
-  email            :
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -239,7 +241,8 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
 
-
+paginate : 5
+paginate_path: "/page:num/"
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
@@ -290,7 +293,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: # true
       share: true
       related: true
@@ -302,3 +305,4 @@ defaults:
     values:
       layout: single
       author_profile: true
+
