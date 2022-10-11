@@ -23,7 +23,7 @@ name                     : "Lee siwon"
 description              : "it's cool time"
 url                      : "https://leesiwon2.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "Leesiwon2/Leesiwon2.github.io"
+repository               : "Leesiwon2/blog-comments"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/portfolio.png"
 masthead_title           : " "
@@ -32,9 +32,9 @@ search                   : true # 사이트 우측 상단 검색 활성화
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : dev-hundred-blog # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : 
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -43,8 +43,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                :  "github-light" #(default)
+    issue_term           :  "pathname" #(default)
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
     category_name        : # Full text name of the category
@@ -110,14 +110,14 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Lee Cool"
   location         : "Republic of Korea"
-  email            : 
+  email            : "si_won2@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "si_won2@naver.com"
+      url: 'si_won2@naver.com'
     - label: "Github"
       icon: "fas fa-fw fa-link"
-      # url: "https://github.com/Leesiwon2"
+      url: "https://github.com/Leesiwon2"
     - #label: "Twitter"
       #icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -142,7 +142,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/Leesiwon2"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -220,9 +220,9 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 15 # amount of posts to show
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -278,12 +278,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-comments:
-  provider               : "disqus"
-  disqus:
-    shortname            : dev-hundred-blog # Short-name
-
+    
 # Defaults
 defaults:
   # _posts
@@ -294,9 +289,11 @@ defaults:
       layout: single
       author_profile: true
       read_time: false
-      comments: # true
+      show_tile: true
+      comments: true
       share: true
       related: true
+      sidebar_main: true
 
    # _pages                      : 해당 하단 영역이 새로 추가되었습니다.
   - scope:

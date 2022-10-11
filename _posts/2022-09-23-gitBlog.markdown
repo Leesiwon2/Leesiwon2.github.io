@@ -1,0 +1,16 @@
+---
+title:  "github.io 블로그 시작하기"
+layout: posts
+categories: 
+    - Blog
+comments: true
+date: 2022-10-11
+last_modified_at: 2022-10-11
+author: "Lee Cool"
+---
+{{page.date}}<br>
+
+나는 오늘부터 git Blog를 제대로 시작한다.
+
+{{page.title}} 은 이 페이지의 제목이다.
+

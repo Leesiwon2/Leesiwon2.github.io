@@ -12,7 +12,6 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-
 {% for post in site.posts %}
     <div class="home-post-list">
         <h4><a href="{{ post.url }}" class="link-post_list">{{ post.title }}</a></h4>        
@@ -21,12 +20,9 @@ layout: archive
         </p>
         <div class="post-list-content">
           {{ post.excerpt }} <!-- excerpt 추가 -->
-            <p class="text-right"><a href="{{ post.url }}">read more...!</a></p>
+            <p class="text-right"><a href="{{ post.url }}">read more...</a></p>
         </div>
     </div>
 {% endfor %}
-
-
-
 
 {% include paginator.html %}
