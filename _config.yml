@@ -107,8 +107,8 @@ analytics:
 # Site Author
 author:
   name             : "LEE SIWON"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Lee Cool"
+  avatar           : # "/assets/images/bio-photo.jpg"
+  bio              : "Developer"
   location         : "Republic of Korea"
   email            : "si_won2@naver.com"
   links:
@@ -278,7 +278,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-    
+
 # Defaults
 defaults:
   # _posts
@@ -293,13 +293,15 @@ defaults:
       comments: true
       share: true
       related: true
-      sidebar_main: true
+      sidebar: 
+        nav: "sidebar-list"
 
    # _pages                      : 해당 하단 영역이 새로 추가되었습니다.
   - scope:
       path: "_pages"
       type: pages
     values:
-      layout: single
+      layout: archive
       author_profile: true
+  
 

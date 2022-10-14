@@ -1,6 +1,6 @@
 ---
-layout: archive
+layout: home
 permalink: /Posts/
-title: "Posts by Year"
+title: "Posts"
 author_profile: true
 ---

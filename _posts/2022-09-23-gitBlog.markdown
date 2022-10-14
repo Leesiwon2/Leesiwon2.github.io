@@ -1,13 +1,31 @@
 ---
 title:  "github.io 블로그 시작하기"
-layout: posts
+layout: single
 categories: 
     - Blog
 comments: true
 date: 2022-10-11
 last_modified_at: 2022-10-11
 author: "Lee Cool"
+permalink: /Blog/
 ---
+
+
+<article class="forecast">
+    <h1>Weather forecast for Seattle</h1>
+    <article class="day-forecast">
+        <h2>03 March 2018</h2>
+        <p>Rain.</p>
+    </article>
+    <article class="day-forecast">
+        <h2>04 March 2018</h2>
+        <p>Periods of rain.</p>
+    </article>
+    <article class="day-forecast">
+        <h2>05 March 2018</h2>
+        <p>Heavy rain.</p>
+    </article>
+</article>
 {{page.date}}<br>
 
 나는 오늘부터 git Blog를 제대로 시작한다.

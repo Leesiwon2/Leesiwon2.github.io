@@ -8,3 +8,35 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
+  
+sidebar-list:
+  - title: Programming
+    children:
+      - title: "Install"
+        url: /install/
+      - title: "Java"
+        url: /java/
+      - title: "JS"
+        url: /js/
+      - title: "DB"
+        url: /db/
+      - title: "React"
+        url: /react/
+      - title: "FrontEnd"
+        url: /frontend/
+      - title: "Error"
+        url: /error/
+      - title: "Git"
+        url: /git/
+
+  - title: "Blog"
+    url: /blog/
+
+  - title: "ETC"
+    url: /etc/
+
+
+  - title: Project
+    children:
+      - title: "shoppingMall"
+        url: https://bellasimi.github.io/shoppingMall/

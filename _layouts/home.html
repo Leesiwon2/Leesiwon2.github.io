@@ -1,6 +1,8 @@
 ---
 layout: archive
+author_profile: true
 ---
+
 
 {{ content }}
 
@@ -12,17 +14,11 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% for post in site.posts %}
-    <div class="home-post-list">
-        <h4><a href="{{ post.url }}" class="link-post_list">{{ post.title }}</a></h4>        
-        <p class="post-meta">
-            {{ post.date | date: "%b %d, %Y" }} by {{ post.author }}
-        </p>
-        <div class="post-list-content">
-          {{ post.excerpt }} <!-- excerpt 추가 -->
-            <p class="text-right"><a href="{{ post.url }}">read more...</a></p>
-        </div>
-    </div>
-{% endfor %}
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
 
 {% include paginator.html %}
