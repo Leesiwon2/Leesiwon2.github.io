@@ -294,7 +294,7 @@ defaults:
       share: true
       related: true
       sidebar: 
-        nav: "sidebar-list"
+        nav: "main"
 
    # _pages                      : 해당 하단 영역이 새로 추가되었습니다.
   - scope:
@@ -303,5 +303,18 @@ defaults:
     values:
       layout: archive
       author_profile: true
-  
+      sidebar: 
+        nav: main
+  # all
+  - scope:
+      path: ""
+    values:
+      layout: home
+      author_profile: true
+      read_time: false
+      comments: # true
+      share: true
+      related: true
+      sidebar:
+        nav: main
 
