@@ -1,0 +1,112 @@
+---
+title:  "현대카드 TM 프로젝트 이력 생성"
+layout: single
+categories: 
+    - JAVA
+comments: true
+date: 2022-07-21
+last_modified_at: 2022-07-21
+author: "Lee Cool"
+permalink: categories/JAVA/hyundaiTM
+---
+
+> ## 1. JS
+> 조회구분 공통코드 입력
+> - inputs.__slctStatus__ = "1202"; //각 페이지 코드값 넣어주기
+
+```java
+$.page1.getParameters = function() {
+    var inputs = $($.page1.pageId).serializeObject();
+    inputs.user_name = $.b.global.username;
+    inputs.searchColumns = onCheckboxChange()
+	inputs.recdSlct = "recdSlct";
+	inputs.slctStatus = "1202"; // c_comm 조회구분 공통코드 입력
+    return inputs;
+}
+```
+[페이지별 조회구분 코드]
+<table>
+<th>업무구분</th><th>화면</th><th>코드</th>
+<tr><td>관리자</td><td>상담이력</td><td>1201</td></tr>
+<tr><td>관리자</td><td>계약DB이력</td><td>1202</td></tr>
+<tr><td>관리자</td><td>녹취전송대상</td><td>1203</td></tr>
+<tr><td>관리자</td><td>고객관리</td><td>1204</td></tr>
+<tr><td>관리자</td><td>고객관리 상세</td><td>1205</td></tr>
+<tr><td>관리자</td><td>DB 캠페인고객</td><td>1206</td></tr>
+<tr><td>상담사</td><td>상담이력</td><td>2201</td></tr>
+<tr><td>상담사</td><td>계약DB이력</td><td>2202</td></tr>
+<tr><td>상담사</td><td>예약이력</td><td>2203</td></tr>
+
+</table>
+
+
+> ## 2. Controller
+>  setParameters 함수 생성 <br>
+> 
+>  - inputs.put("loginIp", __InetAddress.getLocalHost().getHostAddress()__); 
+
+```java
+private Map<String,Object> setParameters(Map<String,Object> inputs) throws UnknownHostException {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal(); 
+        Account customUser = (Account) principal;
+    	int pageIndex=1;
+        try {
+            pageIndex = Integer.parseInt((String) inputs.get("pageIndex")) - 1;
+        }catch(ClassCastException e){
+            pageIndex=(Integer)inputs.get("pageIndex")-1;
+        }
+        int pageSize = Integer.parseInt((String) Utility.nullToValue(inputs.get("pageSize"),      "100"));
+        inputs.put("username", customUser.getUserId());
+    	inputs.put("loginIp", InetAddress.getLocalHost().getHostAddress());
+        inputs.put("limitFrom", pageIndex * pageSize);
+        inputs.put("limitTo", pageSize);
+        logger.debug("parameters = "+inputs);
+        return inputs;
+    }>
+```
+> ## 3. Service 
+>  getRecodeSlct() 함수 호출
+>  - import com.haniln.hnt.intro.IntroMapper; //introMapper import
+>
+>   - @Autowired <br>
+>    private IntroMapper mapper2;
+>   - this.totalRecords = mapper.getTotalRecords();     
+>   - inputs.put("SlctSize", totalRecords);
+>   - mapper2.__getRecodeSlct__(inputs);  //조회함수에 추가 
+
+
+```java
+package com.haniln.hnt.mngr.user;
+
+import java.util.ArrayList;
+...
+import com.haniln.common.utilities.Utility;
+import com.haniln.hnt.intro.IntroMapper;
+
+@Service
+@Transactional(rollbackFor=Exception.class)
+public class MngrUserService {
+    protected static final Logger logger = LoggerFactory.getLogger(MngrUserService.class);
+
+    @Autowired
+    private MngrUserMapper mapper;
+    @Autowired
+    private IntroMapper mapper2;
+
+    public List<Map<String,Object>> getUser(Map<String,Object> inputs) {
+        String columns = Utility.toString(inputs.get("searchColumns"));
+        if("".equals(columns)){
+            inputs.put("columns", new String[0]);
+        }else{
+            inputs.put("columns", columns.split(","));
+        }
+        
+        List<Map<String,Object>> rslt  = mapper.getUser(inputs);
+        this.totalRecords = mapper.getTotalRecords();     
+        inputs.put("SlctSize", totalRecords);
+        mapper2.getRecodeSlct(inputs);   
+        return rslt;
+    }
+}
+
+
