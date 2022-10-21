@@ -18,6 +18,7 @@ gem "github-pages", group: :jekyll_plugins
 gem "minimal-mistakes-jekyll"
 gem "tzinfo"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "jekyll-sitemap"
 
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
