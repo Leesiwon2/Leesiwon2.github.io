@@ -1,6 +1,6 @@
 ---
-layout: posts
-title: "About siwon"
-permalink: /About/
+layout: archive
+title: "about SIWON"
+permalink: /abouts/
 author_profile: true
 ---

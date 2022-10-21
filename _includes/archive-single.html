@@ -10,7 +10,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: 'list' }}__item">
+<div class="{{ include.type | default: 'list' }}__item" style="border-bottom: solid 1px #e3dede; height: auto; overflow: hidden;">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -25,6 +25,9 @@
       {% endif %}
     </h2>
     {% include page__meta.html type=include.type %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description" style="margin-bottom: 2px; font-size: 13px;">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
+    <p style="float: right; margin-top: 1px; font-size: 12px;">{{ post.date | date_to_long_string}}</p>
+    {% endif %}
+    
   </article>
 </div>
