@@ -10,23 +10,24 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: 'list' }}__item" style="border-bottom: solid 1px #e3dede; height: auto; overflow: hidden;">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+<div class="{{ include.type | default: 'list' }}__item" style="border-bottom: solid 1px #e3dede; height: auto;">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork" style="margin-bottom: 20px;">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">
       </div>
     {% endif %}
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline" style="margin-top: 20px;">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
+    <p style="float: left; margin-top: 1px; font-size: 12px; width: 100%; margin-bottom: 3px;">:calendar: 업데이트 : {{ post.date | date_to_long_string}}</p> 
     {% include page__meta.html type=include.type %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description" style="margin-bottom: 2px; font-size: 13px;">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>
-    <p style="float: right; margin-top: 1px; font-size: 12px;">{{ post.date | date_to_long_string}}</p>
+    
     {% endif %}
     
   </article>

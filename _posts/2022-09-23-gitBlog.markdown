@@ -10,24 +10,6 @@ author: "Lee Cool"
 permalink: categories/Blog/gitBlog
 ---
 
-
-<article class="forecast">
-    <h1>Weather forecast for Seattle</h1>
-    <article class="day-forecast">
-        <h2>03 March 2018</h2>
-        <p>Rain.</p>
-    </article>
-    <article class="day-forecast">
-        <h2>04 March 2018</h2>
-        <p>Periods of rain.</p>
-    </article>
-    <article class="day-forecast">
-        <h2>05 March 2018</h2>
-        <p>Heavy rain.</p>
-    </article>
-</article>
-{{page.date}}<br>
-
 나는 오늘부터 git Blog를 제대로 시작한다.
 
 {{page.title}} 은 이 페이지의 제목이다.

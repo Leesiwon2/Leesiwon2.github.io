@@ -25,7 +25,7 @@ url                      : "https://leesiwon2.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Leesiwon2/blog-comments"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/portfolio.png"
+logo                     : #"/assets/siwon.jpg"
 masthead_title           : " "
 search                   : true # 사이트 우측 상단 검색 활성화
 
@@ -108,10 +108,10 @@ analytics:
 # Site Author
 author:
   name             : "LEE SIWON"
-  avatar           : # "/assets/images/bio-photo.jpg"
-  bio              : "Developer"
+  avatar           : "/assets/siwon.jpg"
+  bio              : "SW Developer"
   location         : "Republic of Korea"
-  email            : "si_won2@naver.com"
+  email            : #"si_won2@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -130,7 +130,7 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/xii__won/"
 
 # Site Footer
 footer:
@@ -233,6 +233,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
 
 # mimic GitHub Pages with --safe
 whitelist:
