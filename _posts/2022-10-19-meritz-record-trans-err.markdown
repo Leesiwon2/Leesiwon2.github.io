@@ -1,5 +1,5 @@
 ---
-title:  "메리츠화재 녹취 전송 오류"
+title:  "[delphi] 메리츠화재 녹취 전송 오류"
 layout: single
 categories: 
     - delphi

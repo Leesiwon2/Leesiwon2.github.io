@@ -1,18 +1,24 @@
 ---
 layout: archive
-title: "ABOUT,,"
+title: ""
 permalink: /abouts/
 author_profile: true
 ---
 ## ABOUT LEE SI WON :smile: <br>
 
-
+* * *
+__GitHub STATS__ <br>
 ![Anurag's gitHub stats](https://github-readme-stats.vercel.app/api?username=Leesiwon2&show_icons=true&theme=transparent)
 
+* * *
+__Most Used Languaghes__ <br>
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)
+
+* * *
 
 ![Solved.ac si_won2](http://mazassumnida.wtf/api/v2/generate_badge?boj=si_won2)
 
+* * *
 <div><h1>📚 SKILLS</h1></div>
 
 <div> 
@@ -30,9 +36,6 @@ author_profile: true
   
   <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> 
   <img src="https://img.shields.io/badge/springBoot-6DB33F?style=for-the-badge&logo=springBoot&logoColor=white"> 
-  <br>
-
-  <img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"> 
   <br>
   
   <img src="https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white">

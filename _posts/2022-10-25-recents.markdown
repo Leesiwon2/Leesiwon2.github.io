@@ -1,0 +1,22 @@
+---
+title:  "[blog] 깃블로그를 만들면서"
+layout: single
+categories: 
+    - Blog
+comments: true
+date: 2022-10-25
+last_modified_at: 2022-10-25
+author: "Lee Cool"
+permalink: categories/Blog/gitBlog
+---
+
+
+### 깃 블로그를 만들면서 드는 생각
+<br>
+2020년 2월 입사하여 2022년 10월에 블로그를 만든것이 가장 후회스럽다.
+<br>
+<br>
+지금까지 회사에 입사하여 배운 내용을 전부 회사 다이어리와 메모장에 적어두었다.
+<br>
+앞으로는 깃 블로그를 좀더 유용하게 사용할 계획이다.
+
