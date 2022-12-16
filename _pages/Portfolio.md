@@ -1,8 +1,9 @@
 ---
 layout: archive
-permalink: /Portfolio/
-title: "Portfolio"
+title: ""
+permalink: /portfolio/
 author_profile: true
+
 ---
 ## 현대카드 TM 모듈 웹 개발
 > - 기간 : 2022.01 ~ 2022.09
