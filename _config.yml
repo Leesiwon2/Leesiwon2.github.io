@@ -128,9 +128,9 @@ author:
     - #label: "GitHub"
       #icon: "fab fa-fw fa-github"
       # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/xii__won/"
+    - #label: "Instagram"
+      #icon: "fab fa-fw fa-instagram"
+      #url: "https://www.instagram.com/xii__won/"
 
 # Site Footer
 footer:
