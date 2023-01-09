@@ -20,9 +20,9 @@ permalink: categories/JAVA/getParameters
 
 1. html 단에서 \<form> 생성
     > 파라미터 값이 들어있는 페이지의 form 태그를 생성
-   ````html
-   <form name="cstm" id="cstm" onsubmit="return false;">
-   ````
+    
+   ```<form name="cstm" id="cstm" onsubmit="return false;">
+   ```
 
 2. js 단에서 파라미터 받기
     > js에서 JSON 형태로 파라미터 가져오기
