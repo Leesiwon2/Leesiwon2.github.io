@@ -5,7 +5,7 @@ categories:
     - study
 comments: true
 date: 2023-01-12
-last_modified_at: 2023-01-12
+last_modified_at: 2023-01-13
 author: "Lee Cool"
 permalink: categories/study/val-text-html
 ---
