@@ -1,0 +1,35 @@
+---
+title:  "[study] 프로그래머스 코딩테스트 Level 2. JadenCase 문자열 만들기"
+layout: single
+categories: 
+    - study
+comments: true
+date: 2023-01-16
+last_modified_at: 2023-01-16
+author: "Lee Cool"
+permalink: categories/study/codingTest0116
+---
+
+
+### JadenCase 문자열 만들기
+1. 문제
+![Q0116](/img/Q0116.PNG)
+
+1. 풀이
+   ````java
+    class Solution {
+        public String solution(String s) {
+            String answer = "";
+            char[] arr = s.toCharArray();
+            arr[0]=Character.toUpperCase(arr[0]);
+            for(int i =1; i< arr.length; i++) {
+                arr[i]= (arr[i-1] ==' ') ? Character.toUpperCase(arr[i]) : Character.toLowerCase(arr[i]);
+            }
+            answer = new String(arr);
+            return answer;
+        }
+    }
+    ````
+
+    1. 실행결과
+    ![R0116](/img/R0116.PNG)
