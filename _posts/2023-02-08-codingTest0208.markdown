@@ -1,0 +1,36 @@
+---
+title:  "[study] 프로그래머스 코딩테스트 Level 2. 최솟값 만들기"
+layout: single
+categories:
+    - study
+comments: true
+date: 2023-02-08
+last_modified_at: 2023-02-08
+author: "Lee Cool"
+permalink: categories/study/codingTest0208
+---
+
+
+### 최솟값 만들기
+1. 문제
+![Q0208](/img/Q0208.PNG)
+
+2. 풀이
+   ````java
+   import java.util.*;
+
+   class Solution {
+     public int solution(int []A, int []B) {
+       int answer = 0;
+       Arrays.sort(A);
+       Arrays.sort(B);
+       for(int i=0; i< A.length; i++){
+           answer += A[i] * B[A.length-1-i];
+       }
+       return answer;
+     }
+   }
+    ````
+
+3. 실행결과
+![R0208](/img/R0208.PNG)
