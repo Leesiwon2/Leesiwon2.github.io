@@ -1,0 +1,49 @@
+---
+title:  "[study] 인프런 jpa강의-(1) 라이브러리 설정"
+layout: single
+categories:
+    - study
+comments: true
+date: 2023-02-14
+last_modified_at: 2023-02-14
+author: "Lee Cool"
+permalink: categories/study/jpa0214
+---
+
+### 라이브러리 설정  
+
+__1. 스프링 부트 라이브러리__  <br>
+* spring-boot-starter-web  
+  - embed tomcat : 톰캣  
+  - spring web mvc : 스프링 웹 mvc  
+
+* spring-boot-start-thymeleaf : 타임리프  
+
+* spring-boot-starter-data-jpa  
+  - aop
+  - jdbc  
+  - HikariCP : 커넥션 풀  
+  - Hibernate : 하이버네이트  
+
+* spring-boot-starter : 스프링부트 + 코어 + 로깅  
+* spring boot  
+  - core  
+  - spring boot logging  
+  - spring-core  
+  - slf4j의 구현체 logBack  
+__2. 테스트 라이브러리__ <br>    
+* spring-boot-starter-test  
+  - junit : 테스트 프레임워크  
+  - spring-test  
+  - mokito  
+  - assertj : 테스트 코드 편하게 작성도와주는 라이브러리  
+
+__3. 핵심 라이브러리__ <br>
+* 스프링 mvc  
+* 스프링 orm  
+* 하이버네이트  
+* jpa  
+* 스프링 데이터 JPA  
+
+__4. 기타__ <br>
+* H2 DATABASE
